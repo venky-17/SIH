@@ -35,7 +35,7 @@ const Home = (props) => {
       {props.name || location.state?.name ? (
         <>
           <h1>{`Welcome ${props.name || location.state?.name}`}</h1>
-          <Link to="https://hrrakesh.pythonanywhere.com/">ChatBot</Link>
+          <button>  <Link to="https://hrrakesh.pythonanywhere.com/">ChatBot</Link> </button>
           
           <button onClick={handleSignOut}>Logout</button>
         </>
