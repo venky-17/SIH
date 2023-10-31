@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link, useLocation , useNavigate} from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
+import Navbar from "../Components/Navbar"
 
 const Home = (props) => {
   const location = useLocation();
@@ -30,6 +31,7 @@ const Home = (props) => {
 
   return (
     <>
+      <Navbar/>
       <h1>Welcome to  Legal Compass</h1>
 
       {props.name || location.state?.name ? (
