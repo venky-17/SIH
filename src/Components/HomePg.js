@@ -11,27 +11,10 @@ const Home = (props) => {
     console.log("User's display name:", props.name || location.state?.name);
   }, [props.name, location.state]);
 
-  const handleSignOut = () => {
-    const auth = getAuth();
-    const user = auth.currentUser;
-    if (user) {
-      signOut(auth)
-        .then(() => {
-          console.log("Sign-out successful.");
-          navigate("/")
-
-        })
-        .catch((error) => {
-          console.error("An error happened during sign-out:", error);
-        });
-    } else {
-      console.log("No user is currently authenticated.");
-    }
-  };
-
+  
   return (
     <>
-      <Navbar/>
+      <Navbar name={props.name || location.state?.name}/>
       <h1>Welcome to  Legal Compass</h1>
 
       {props.name || location.state?.name ? (
@@ -39,7 +22,7 @@ const Home = (props) => {
           <h1>{`Welcome ${props.name || location.state?.name}`}</h1>
           <button>  <Link to="https://hrrakesh.pythonanywhere.com/">ChatBot</Link> </button>
           
-          <button onClick={handleSignOut}>Logout</button>
+          
         </>
       ) : (
         <>
