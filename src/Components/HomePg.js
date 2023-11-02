@@ -29,7 +29,11 @@ const Home = (props) => {
           <p>Welcome</p>
           <Link to="/login">Login</Link>
           <br />
-          <Link to="/signup">SignUp</Link>
+          <Link to="/signup">SignUp</Link> <br />
+
+          <Link to="/lawyersignin">Lawyer Login</Link> <br />
+    
+          <Link to="/lawyersignup"> Lawyer SignUp</Link> <br />
         </>
       )}
     </>
