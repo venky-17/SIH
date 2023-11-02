@@ -110,9 +110,7 @@ nav{
     transition: .5s;
     color: initial;
 }
-a{
-    pointer-events: none;
-}
+
 
 
 /*-----------response---------*/
