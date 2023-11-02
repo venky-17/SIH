@@ -170,15 +170,19 @@ nav{
     font-weight:bold;
     
 }
-.hamburger-nav-items{
-    display: none;
-}
-.display-items{
-    display: block;
-}
-.hide-items{
-    display: none;
-}
+
+.display-items {
+    max-height: 500px; 
+    transition: max-height 0.8s ease-in-out; 
+    overflow: hidden; 
+  }
+  
+  .hide-items {
+    max-height: 0;
+    transition: max-height 0.9s ease-in-out; 
+    overflow: hidden;
+  }
+  
   
 
 
@@ -188,7 +192,7 @@ nav{
 
 @media (max-width:500px){
     .logo h1{
-        font-size: 1rem;
+        font-size: 1.2rem;
         
     }
     .logo{

@@ -40,14 +40,19 @@ const Navbar = (props) => {
 
   const handleMenuclick = () => {
         setListOpen(!listOpen)
-        
-
+        if(listOpen){
+            console.log('open');
+        } else{
+            console.log('closed');
+        }
+    
   }
 
   const handletogglebutton = () => {
-    setIsOpened((prevIsOpened) => !prevIsOpened);
-    setListOpen(!listOpen);
-  };
+    handleMenuclick()
+    toggleMenu()
+
+  }
 
   return (
     <>
@@ -80,12 +85,29 @@ const Navbar = (props) => {
           <ul>
             <li><a href="#">Home</a></li>
             <li>
-              <button className="logout-btn " onClick={handleSignOut}>
-                Logout
-              </button>
+            {
+  getAuth()?.currentUser ? (
+    <button className="logout-btn" onClick={handleSignOut}>
+      LogOut
+    </button>
+  ) : (
+    <Link to="/login">
+      <button className="logout-btn">
+        SignIn
+      </button>
+    </Link>
+  )
+}
+
+
+             
             </li>
             <li>
-              <a href="">{` ${props.name || location.state?.name}`}</a>
+            {
+                    getAuth()?.currentUser ? ( <a href="">{` ${props.name || location.state?.name}`}</a>) : (
+                        <a href="">Guest</a>
+                    )
+                  }
             </li>
             <li><a href="#">Profile</a></li>
           </ul>
@@ -98,13 +120,31 @@ const Navbar = (props) => {
           <ul>
             <li><a href="#">Home</a></li>
             <li>
-              <a href="">{` ${props.name || location.state?.name}`}</a>
+                  {
+                    getAuth()?.currentUser ? ( <a href="">{` ${props.name || location.state?.name}`}</a>) : (
+                        <a href="">Guest</a>
+                    )
+                  }
+             
             </li>
             <li><a href="#">Profile</a></li>
             <li>
-              <button className="logout-btn " onClick={handleSignOut}>
-                Logout
-              </button>
+            {
+                 getAuth().currentUser ? (
+    <button className="logout-btn" onClick={handleSignOut}>
+      LogOut
+    </button>
+  ) : (
+    
+    <Link to="/login">
+  <button className="logout-btn">
+    SignIn
+  </button>
+</Link>
+
+  )
+}
+
             </li>
             
         
