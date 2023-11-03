@@ -110,6 +110,7 @@ nav{
 .logout-btn:not(:hover) {
     transition: .5s;
     color: initial;
+    
 }
 
 /*-----------hamburg menu-----*/
