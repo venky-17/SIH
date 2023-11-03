@@ -6,7 +6,9 @@ import SignUp from './Components/SignUp';
 import NotFound from './Components/NotFound';
 import { useEffect, useState } from 'react';
 import { auth } from './Components/Firebase/Config';
-
+import LawyerSignUp from "../src/Components/Lawyer/LawyerSIgnUp"
+import LawyerLogin from './Components/Lawyer/LawyerLogin';
+import LawyerHome from './Components/Lawyer/LawyerHome';
 
 
 function App() {
@@ -28,6 +30,11 @@ function App() {
           <Route path='/' element={<Home name={userName} />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
+          <Route path='/lawyersignup' element={<LawyerSignUp />} />
+          <Route path='/lawyersignin' element={<LawyerLogin />} />
+          <Route path='/lawyerhome' element={<LawyerHome name={userName}/>} />
+
+
           
           <Route path='*' element={<NotFound />} />
          
