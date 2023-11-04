@@ -199,6 +199,7 @@ nav{
     .logo{
         margin-left: 0;
         padding: 15px;
+        
     }
 
     .nav-items ul{
@@ -213,6 +214,11 @@ nav{
 
     }
 
+}
+@media  (max-width:390px){
+    .menu{
+        margin-left: 120px;
+    }
 }
 
 
