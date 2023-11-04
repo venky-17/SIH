@@ -72,6 +72,8 @@ function UserLogin() {
               <div className="inputBox">
                 <input type="submit" value="Login" onClick={handleLogIn} disabled={submitDisabled}/>
               </div>
+               
+               <button className='changeUsertype'><Link className='changeUsertypeLink' to="/lawyersignin">I am a lawyer. </Link></button>
             </div>
           </div>
         </div>

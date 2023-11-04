@@ -90,6 +90,7 @@ const LawyerSignUp = ()=>{
               <div className="inputBox">
                 <input type="submit" value="Sign Up" onClick={handleSignUp} disabled={submitDisabled}/>
               </div>
+              <button className='changeUsertype'><Link className='changeUsertypeLink' to="/login">I am not a lawyer. </Link></button>
             </div>
           </div>
         </div>

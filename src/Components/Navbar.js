@@ -35,7 +35,7 @@ const Navbar = (props) => {
     console.log("User's display name:", props.name || location.state?.name);
   }, [props.name, location.state]);
 
-  //handle hamburger -------
+  
 
   
 
@@ -83,8 +83,12 @@ const Navbar = (props) => {
           </svg>
         </button>
         <div className="nav-items">
-          <ul>
-            <li><a href="#">Home</a></li>
+          <ul>   
+                 {
+                  getAuth()?.currentUser && <>  <li><a href="#">Home</a></li>  </>
+                 }
+               
+          
             <li>
             {
   getAuth()?.currentUser ? (
@@ -110,7 +114,9 @@ const Navbar = (props) => {
                     )
                   }
             </li>
-            <li><a href="#">Profile</a></li>
+             {
+              getAuth().currentUser && <> <li><a href="#">Profile</a></li></>
+             }
           </ul>
         </div>
 
@@ -119,7 +125,9 @@ const Navbar = (props) => {
     {
         listOpen && ( <div className="hamburger-nav-items">
           <ul>
-            <li><a href="#">Home</a></li>
+          {
+                  getAuth()?.currentUser && <>  <li><a href="#">Home</a></li>  </>
+                 }
             <li>
                   {
                     getAuth()?.currentUser ? ( <a href="">{` ${props.name || location.state?.name}`}</a>) : (
@@ -128,7 +136,9 @@ const Navbar = (props) => {
                   }
              
             </li>
-            <li><a href="#">Profile</a></li>
+            {
+              getAuth().currentUser && <> <li><a href="#">Profile</a></li></>
+             }
             <li>
             {
                  getAuth().currentUser ? (
