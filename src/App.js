@@ -1,14 +1,17 @@
 import './App.css';
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import Home from "./Components/HomePg";
-import Login from './Components/Login';
-import SignUp from './Components/SignUp';
+
 import NotFound from './Components/NotFound';
 import { useEffect, useState } from 'react';
 import { auth } from './Components/Firebase/Config';
-import LawyerSignUp from "../src/Components/Lawyer/LawyerSIgnUp"
-import LawyerLogin from './Components/Lawyer/LawyerLogin';
+
+
 import LawyerHome from './Components/Lawyer/LawyerHome';
+import UserLogin from './Components/UserLogin';
+import LawyerLogin from './Components/Lawyer/LawyerLoginn';
+import UserSignUp from './Components/UserSignUp';
+import LawyerSignUp from './Components/Lawyer/LawyerSignUp';
 
 
 function App() {
@@ -28,8 +31,8 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Home name={userName} />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/signup' element={<SignUp />} />
+          <Route path='/login' element={<UserLogin />} />
+          <Route path='/signup' element={<UserSignUp />} />
           <Route path='/lawyersignup' element={<LawyerSignUp />} />
           <Route path='/lawyersignin' element={<LawyerLogin />} />
           <Route path='/lawyerhome' element={<LawyerHome name={userName}/>} />
