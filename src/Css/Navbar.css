@@ -10,6 +10,9 @@ nav{
     justify-content: space-between;
     background:black ;
     width: 100%;
+    border-bottom: #fff;
+    box-shadow:  0 4px 10px rgba(255, 252, 252, .4); 
+    
 
 }
 .logo{
@@ -136,30 +139,30 @@ nav{
   }
   .line1 {
     stroke-dasharray: 60 207;
-    stroke-width: 6;
+    stroke-width: 8;
   }
   .line2 {
     stroke-dasharray: 60 60;
-    stroke-width: 6;
+    stroke-width: 8;
   }
   .line3 {
     stroke-dasharray: 60 207;
-    stroke-width: 6;
+    stroke-width: 8;
   }
   .opened .line1 {
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
-    stroke-width: 6;
+    stroke-width: 8;
   }
   .opened .line2 {
     stroke-dasharray: 1 60;
     stroke-dashoffset: -30;
-    stroke-width: 6;
+    stroke-width: 8;
   }
   .opened .line3 {
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
-    stroke-width: 6;
+    stroke-width: 8;
   }
 
 
@@ -173,16 +176,17 @@ nav{
 }
 
 .display-items {
-    max-height: 500px; 
-    transition: max-height 0.8s ease-in-out; 
-    overflow: hidden; 
+    max-height: 500px;
+    transition: max-height 0.8s ease-in-out; /* Apply transition to max-height */
+    overflow: hidden;
   }
   
   .hide-items {
     max-height: 0;
-    transition: max-height 0.9s ease-in-out; 
+    transition: man-height 0.8s ease-in-out; /* Apply transition to max-height */
     overflow: hidden;
   }
+  
   
   
 
@@ -218,6 +222,7 @@ nav{
 @media  (max-width:390px){
     .menu{
         margin-left: 120px;
+        
     }
 }
 

@@ -3,6 +3,9 @@ import { Link, useLocation , useNavigate} from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 import Navbar from "../Components/Navbar";
 import TemplateForm from "./Templates/TemplateHome";
+import "../Css/Homepage.css"
+import Footer from "./Templates/Footer";
+
 
 const Home = (props) => {
   const location = useLocation();
@@ -14,9 +17,11 @@ const Home = (props) => {
 
   
   return (
-    <>
+   <div className="homepagebody">
+    
       <Navbar name={props.name || location.state?.name}/>
-      <h1>Welcome to  Legal Compass</h1>
+      <h1 className="homepage-h1">Welcome to  Legal Compass</h1>
+      
       <TemplateForm />
 
       {props.name || location.state?.name ? (
@@ -38,7 +43,8 @@ const Home = (props) => {
           <Link to="/lawyersignup"> Lawyer SignUp</Link> <br />
         </>
       )}
-    </>
+    <Footer/>
+   </div>
   );
 };
 
