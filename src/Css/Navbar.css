@@ -110,6 +110,7 @@ nav{
 .logout-btn:not(:hover) {
     transition: .5s;
     color: initial;
+    
 }
 
 /*-----------hamburg menu-----*/
@@ -193,13 +194,13 @@ nav{
 @media (max-width:500px){
     .logo h1{
         font-size: 1.2rem;
-        
+
     }
     .logo{
         margin-left: 0;
         padding: 15px;
     }
-    
+
     .nav-items ul{
         display: none;
     }
@@ -209,10 +210,11 @@ nav{
     .hamburger-nav-items{
         background: rgb(219, 217, 217);
         padding-bottom: 15px;
-        
+
     }
-    
+
 }
 
 
 
+  
