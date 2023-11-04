@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth } from "../Firebase/Config";
-import "../UserCSS/UserLogin.css"
+import { auth } from "./Firebase/Config";
+import "../Components/UserCSS/UserLogin.css"
 
 
-const LawyerSignUp = ()=>{
+const UserSignUp = ()=>{
     const navigate = useNavigate();
 
     const [values, setValues] = useState({
@@ -53,7 +53,7 @@ const LawyerSignUp = ()=>{
 
         <div className="signin">
           <div className="content">
-            <h2>Lawyer SignUp</h2>
+            <h2>User SignUp</h2>
             <div className="form">
 
 
@@ -81,7 +81,7 @@ const LawyerSignUp = ()=>{
               </div>
               <div className="links">
              
-              <Link  to="/lawyersignin">Have an account? Sign In</Link>
+              <Link  to="/login">Have an account? Sign In</Link>
               
               
               
@@ -102,4 +102,4 @@ const LawyerSignUp = ()=>{
 }
 
 
-export default LawyerSignUp
+export default UserSignUp
