@@ -3,6 +3,7 @@ import { getAuth, signOut } from "firebase/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../Css/Navbar.css"
 
+
 const Navbar = (props) => {
   const navigate = useNavigate();
   const location = useLocation();
