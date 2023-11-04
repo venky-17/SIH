@@ -40,7 +40,9 @@ const Home = (props) => {
 
           <Link to="/lawyersignin">Lawyer Login</Link> <br />
     
-          <Link to="/lawyersignup"> Lawyer SignUp</Link> <br />
+
+           <Link to="/lawyersignup"> Lawyer SignUp</Link> <br />
+
         </>
       )}
     <Footer/>
