@@ -21,30 +21,18 @@ const Home = (props) => {
     
       <Navbar name={props.name || location.state?.name}/>
       <h1 className="homepage-h1">Welcome to  Legal Compass</h1>
-      
-      <TemplateForm />
 
-      {props.name || location.state?.name ? (
-        <>
-          <h1>{`Welcome ${props.name || location.state?.name}`}</h1>
-          <button>  <Link to="https://hrrakesh.pythonanywhere.com/">ChatBot</Link> </button>
-          
-          
-        </>
-      ) : (
-        <>
-          <p>Welcome</p>
-          <Link to="/login">Login</Link>
-          <br />
-          <Link to="/signup">SignUp</Link> <br />
 
-          <Link to="/lawyersignin">Lawyer Login</Link> <br />
-    
+      {
+        getAuth().currentUser &&  <TemplateForm />
+      }
+        
 
-           <Link to="/lawyersignup"> Lawyer SignUp</Link> <br />
+        {
+          getAuth().currentUser &&   <>  <button>  <Link to="https://hrrakesh.pythonanywhere.com/">ChatBot</Link> </button></>
+        }
+     
 
-        </>
-      )}
     <Footer/>
    </div>
   );

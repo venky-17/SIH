@@ -84,9 +84,11 @@
 }
 .tag-purple {
   background-color: #5e76bf;
+  align-self: center;
 }
 .tag-pink {
   background-color: #cd5b9f;
+  align-self: center;
 }
 
 .card-body p {
@@ -107,6 +109,9 @@
   letter-spacing: .5px;
 }
 
+.title-desc-style{
+  align-self: center;
+}
 @media (max-width:500px){
   .card{
     width: 300px;

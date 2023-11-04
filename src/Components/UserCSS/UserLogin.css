@@ -65,6 +65,7 @@ section .signin
 {
   position: absolute;
   width: 400px;
+  height: 500px;
   background: white;  
   z-index: 1000;
   display: flex;
@@ -169,6 +170,31 @@ input[type="submit"]:active
 {
   opacity: 0.6;
 }
+
+
+
+
+.changeUsertype{
+  font-size: 1.2rem;
+  padding: 6px 4px;
+  width: 70%;
+  align-self: center;
+  text-align: center;
+  border: none;
+  outline: 5px solid black;
+  border-radius: 4px;
+}
+
+
+.changeUsertype .changeUsertypeLink{
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  display: block;
+}
+
+
+
 @media (max-width: 900px)
 {
   section span 

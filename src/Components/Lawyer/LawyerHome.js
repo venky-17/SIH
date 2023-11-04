@@ -17,8 +17,12 @@ const LawyerHome = (props)=>{
         <div>
         <Navbar name={props?.name || location.state?.name}/>
 
-        <h1>saul goodman</h1>
+         {
+            getAuth().currentUser && <>
+            <h1>saul goodman</h1>
         <img src="https://www.postavy.cz/foto/saul-goodman-foto.jpg" alt="" />
+            </>
+         }
 
        </div>
         )
