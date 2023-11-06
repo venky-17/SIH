@@ -5,6 +5,7 @@ import Navbar from "../Components/Navbar";
 import TemplateForm from "./Templates/TemplateHome";
 import "../Css/Homepage.css"
 import Footer from "./Templates/Footer";
+import LandingPage from "./Templates/LandingPage";
 
 
 const Home = (props) => {
@@ -20,9 +21,9 @@ const Home = (props) => {
    <div className="homepagebody">
     
       <Navbar name={props.name || location.state?.name}/>
-      <h1 className="homepage-h1">Welcome to  Legal Compass</h1>
+      <LandingPage/>
 
-
+       
       {
         getAuth().currentUser &&  <TemplateForm />
       }
