@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Inconsolata" );
+
 @import url("https://fonts.googleapis.com/css?family=Space Mono");
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
 * {
     padding: none;
     margin: none;
@@ -12,7 +12,7 @@
 
 :root {
     --Scarecrow: url("../Images/lc.png");
-    --font1: "Inconsolata";
+    
     --line-height: 36px;
     --letter-spacing: -0.035em;
     --text-color: #4F4F4F;
@@ -26,29 +26,20 @@
     padding:30px 50px;
     padding-top: 80px;
     margin: 0px 0px;
+    font-family: 'Space Mono';
   
 }
 
-.intro-text {
-    font-weight: 700;
-    font-size: 44px;
-    line-height: 25px;
-    letter-spacing: -0.08em;
-    text-transform: uppercase;
-    color: #333333;
-    margin-bottom:5%;
-    letter-spacing: .5px;
-}
 
-.intro-text {
-    font-family: var(--font1);
-}
+
+
 
 .landing-container {
     display: flex;
     justify-content: space-between;
     gap:10%;
     padding: 20px;
+    font-family: 'Space Mono';
 }
 
 .Scarecrow {
@@ -68,7 +59,7 @@
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 36px;
     letter-spacing: -0.035em;
     color: #4F4F4F;
@@ -174,6 +165,7 @@
         flex-direction: column;
         align-items: center;
         padding: 0;
+        font-family: 'Space Mono';
 
       
         
@@ -201,7 +193,7 @@
     }
 
     .getstarted-button {
-        font-family: 'Space Mono';
+        
         width: 216px;
         height: 68px;
         background: #333333;
@@ -221,6 +213,7 @@
         text-transform: uppercase;
         align-self: center;
         letter-spacing: 1px;
+        font-family: 'Space Mono';
         
     }
     .landingmain{
@@ -231,7 +224,7 @@
         background-color: white;
         padding:30px 0px;
         margin: 0;
-        
+         font-family: 'Space Mono';
         border-radius: 0px;
       
     }
