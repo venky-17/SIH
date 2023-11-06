@@ -58,7 +58,12 @@
   }
 
 
-
+.error-message-container{
+    display: flex;
+    flex-direction: column;
+   
+    
+}
 .error-text {
     font-family: 'Space Mono';
     font-style: normal;
@@ -93,6 +98,7 @@
     display:flex;
     justify-content: center;
     margin-top:5px;
+    margin-left: 20px;
     border-radius: 100px;
     cursor: pointer;
     
@@ -142,7 +148,7 @@
 
 }
 .search-btn  .fa-search{
-  
+   padding: 8px 20px;
    font-size: 20px;
    padding-bottom: 10px;
    padding-top: 6.7px;
