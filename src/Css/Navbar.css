@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0%;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  
 }
 nav{
     display: flex;
@@ -12,6 +12,7 @@ nav{
     width: 100%;
     border-bottom: #fff;
     box-shadow:  0 4px 10px rgba(255, 252, 252, .4); 
+    font-family: 'Poppins', sans-serif;
     
 
 }
@@ -26,6 +27,7 @@ nav{
     cursor: pointer;
     position: relative;
     overflow: hidden; 
+    
 }
 
 .logo h1::before,

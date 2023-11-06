@@ -13,6 +13,7 @@
   background-color: black;
   font-family: "poppins", sans-serif;
   color: #10182f;
+ 
 
 }
 .title-style{
@@ -116,5 +117,12 @@
   .card{
     width: 300px;
     row-gap: 2rem;
+  }
+  .container-2{
+    
+    
+    row-gap: 1rem;
+    
+  
   }
 }
