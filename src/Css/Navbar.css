@@ -13,7 +13,9 @@ nav{
     border-bottom: #fff;
     box-shadow:  0 4px 10px rgba(255, 252, 252, .4); 
     font-family: 'Poppins', sans-serif;
-    
+    position: fixed;
+    top: 0;
+    z-index: 10;
 
 }
 .logo{

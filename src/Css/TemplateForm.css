@@ -13,6 +13,7 @@
   background-color: black;
   font-family: "poppins", sans-serif;
   color: #10182f;
+  
  
 
 }
@@ -32,7 +33,7 @@
   align-items: center;
   justify-content: space-evenly;
   flex-wrap:wrap;
-  
+  padding-top: 60px;
   row-gap: 3rem;
   column-gap: 6rem;
 
@@ -54,6 +55,7 @@
   transform: scale(1.1);
   
   
+  
 }
 .card-header img {
   width: 100%;
@@ -73,7 +75,7 @@
   background: #cccccc;
   border-radius: 50px;
   font-size: 12px;
-  margin: 0;
+  margin: 0 0 8px;
   color: #fff;
   padding: 2px 10px;
   text-transform: uppercase;
@@ -112,6 +114,10 @@
 
 .title-desc-style{
   align-self: center;
+  
+}
+.title-style{
+  margin-bottom: 8px;
 }
 @media (max-width:500px){
   .card{

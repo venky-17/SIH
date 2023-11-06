@@ -24,7 +24,7 @@
     height:80%;
     background-color: #FFFFFF;
     padding:30px 50px;
-    border-radius: 20px;
+    padding-top: 80px;
     margin: 0px 0px;
   
 }
@@ -58,7 +58,12 @@
   }
 
 
-
+.error-message-container{
+    display: flex;
+    flex-direction: column;
+   
+    
+}
 .error-text {
     font-family: 'Space Mono';
     font-style: normal;
@@ -93,16 +98,20 @@
     display:flex;
     justify-content: center;
     margin-top:5px;
+    margin-left: 20px;
     border-radius: 100px;
+    cursor: pointer;
     
   
 
 }
+
 .getstarted-button .a {
     color: white;
     text-decoration: none;
     font-family: 'Space Mono';
     display: block;
+    background: none;
 }
 .getStartedbtn{
     background: none;
@@ -139,10 +148,10 @@
 
 }
 .search-btn  .fa-search{
-   padding: 10px 20px;
+   padding: 8px 20px;
    font-size: 20px;
-   padding-bottom: 10.5px;
-   padding-top: 6.5px;
+   padding-bottom: 10px;
+   padding-top: 6.7px;
    align-self: center;
  
 
@@ -171,7 +180,7 @@
     }
 
     .error-heading {
-        
+        font-family: 'Space Mono';
         word-wrap: none;
         line-height: 71px;
         font-size: 50px;
@@ -192,6 +201,7 @@
     }
 
     .getstarted-button {
+        font-family: 'Space Mono';
         width: 216px;
         height: 68px;
         background: #333333;
