@@ -4,9 +4,16 @@
     background-color: black;
     color: #fff;
     font-family: "poppins", sans-serif;
+    margin-top: 100px;
+    scroll-behavior: smooth;
 }
 .homepage-h1{
     margin-top: 2rem;
+}
+@media (max-width:500px){
+    .homepagebody{
+        margin-top:55px;
+    }
 }
   
   
