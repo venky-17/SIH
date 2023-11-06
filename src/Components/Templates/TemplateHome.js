@@ -1,18 +1,24 @@
 import React from 'react';
 import "../../Css/TemplateForm.css"
+import community from "../../Images/community.png"
+import consult from "../../Images/consult.png"
+import KYR from "../../Images/KYR.png"
+import Learning from "../../Images/Learning.png"
+import laws from "../../Images/laws.png"
+import news from "../../Images/news.png"
 
 
 function TemplateForm() {
   const cardData = [
     {
-      imageSrc: 'https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg',
+      imageSrc: laws ,
       altText: 'learning',
       tagText: 'Learn',
       title: 'LAWS',
       description: 'desc abt the section',
     },
     {
-      imageSrc: 'https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg',
+      imageSrc: KYR,
       altText: 'learning',
       tagText: 'Learn',
       title: 'Know Your Rights',
@@ -26,21 +32,42 @@ function TemplateForm() {
       description: 'desc abt the section',
     },
     {
-      imageSrc: 'https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg',
+      imageSrc: consult,
       altText: 'consult',
       tagText: 'Consult',
       title: 'Consultation',
       description: 'desc abt the section',
     },
     {
-      imageSrc: 'https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg',
+      imageSrc: news,
       altText: 'update',
       tagText: 'Updates',
       title: 'News',
       description: 'desc abt the section',
     },
     {
-      imageSrc: 'https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg',
+      imageSrc: community,
+      altText: 'interact',
+      tagText: 'Interact',
+      title: 'Community Forum',
+      description: 'desc abt the section',
+    },
+    {
+      imageSrc: Learning,
+      altText: 'interact',
+      tagText: 'Interact',
+      title: 'Community Forum',
+      description: 'desc abt the section',
+    },
+    {
+      imageSrc: Learning,
+      altText: 'interact',
+      tagText: 'Interact',
+      title: 'Community Forum',
+      description: 'desc abt the section',
+    },
+    {
+      imageSrc: Learning,
       altText: 'interact',
       tagText: 'Interact',
       title: 'Community Forum',
