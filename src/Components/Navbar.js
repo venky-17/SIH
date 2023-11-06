@@ -109,8 +109,8 @@ const Navbar = (props) => {
             </li>
             <li>
             {
-                    getAuth()?.currentUser ? ( <a href="">{` ${props.name || location.state?.name}`}</a>) : (
-                        <a href="">Guest</a>
+                    getAuth()?.currentUser ? ( <a href="" style={{ pointerEvents: 'none' }}>{` ${props.name || location.state?.name}`}</a>) : (
+                        <a href="" style={{ pointerEvents: 'none' }}>Guest</a>
                     )
                   }
             </li>
@@ -130,8 +130,8 @@ const Navbar = (props) => {
                  }
             <li>
                   {
-                    getAuth()?.currentUser ? ( <a href="">{` ${props.name || location.state?.name}`}</a>) : (
-                        <a href="">Guest</a>
+                    getAuth()?.currentUser ? ( <a href="" style={{ pointerEvents: 'none' }}>{` ${props.name || location.state?.name}`}</a>) : (
+                        <a href="" style={{ pointerEvents: 'none' }}>Guest</a>
                     )
                   }
              

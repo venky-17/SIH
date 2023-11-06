@@ -2,10 +2,19 @@ import React from 'react';
 import "../../Css/LandingPage.css"
 import { Link,} from "react-router-dom";
 import 'font-awesome/css/font-awesome.min.css';
+import { getAuth } from "firebase/auth";
 
 
 
 const LandingPage = () => {
+
+  const scrollToGetStarted = () => {
+    const getStartedElement = document.getElementById('templatesID');
+    if (getStartedElement) {
+      getStartedElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  
   return (
     <div className="App">
       <main className='landingmain'>
@@ -21,9 +30,14 @@ const LandingPage = () => {
             A one stop AI-driven platform for educating, harmonizing legal insights, resources, counsel,
                        and real-time legal updates all incorporated within a single platform.
             </p>
-            <div className="getstarted-button">
+            <div className="getstarted-button">   
+            {
+              getAuth().currentUser ? (<button onClick={scrollToGetStarted} className='getStartedbtn'>   <Link className='a' >Get Started</Link></button>)
+              :
+              (<button className='getStartedbtn'>   <Link className='a' to="/signup">Get Started</Link></button>)
+            }
              
-           <button className='getStartedbtn'>   <Link className='a' to="/signup">Get Started</Link></button>
+           
 
             </div>
           </div>

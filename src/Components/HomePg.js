@@ -21,11 +21,11 @@ const Home = (props) => {
    <div className="homepagebody">
     
       <Navbar name={props.name || location.state?.name}/>
-      <LandingPage/>
+      <LandingPage />
 
        
       {
-        getAuth().currentUser &&  <TemplateForm />
+        getAuth().currentUser &&  <TemplateForm  />
       }
         
 

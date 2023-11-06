@@ -25,7 +25,7 @@ function TemplateForm() {
       description: 'desc abt the section',
     },
     {
-      imageSrc: 'https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg',
+      imageSrc: KYR,
       altText: 'Chatbot',
       tagText: 'Chatbot',
       title: 'AI-Chat Assistant',
@@ -78,7 +78,7 @@ function TemplateForm() {
 
   return (
     
-    <div className="container-2">
+    <div className="container-2" id='templatesID'>
     
       {cardData.map((card, index) => (
         <div key={index} className="card">
