@@ -190,6 +190,7 @@
         line-height: 28px;
         padding: 10px 10px;
         word-spacing: 2px;
+        letter-spacing: .2px;
     }
 
     .getstarted-button {
