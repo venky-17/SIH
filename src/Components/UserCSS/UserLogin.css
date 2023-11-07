@@ -4,13 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Quicksand', sans-serif;
+ 
 }
 
 .main{
   max-height: 100vh;
   background: #000;
   max-width: 100vh;
+  font-family: 'Quicksand', sans-serif;
 
 }
 .loginsection
