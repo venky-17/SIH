@@ -1,5 +1,8 @@
 
 @import url("https://fonts.googleapis.com/css?family=Space Mono");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&display=swap');
 
 * {
     padding: none;
@@ -26,7 +29,6 @@
     padding:30px 50px;
     padding-top: 80px;
     margin: 0px 0px;
-    font-family: 'Space Mono';
   
 }
 
@@ -39,7 +41,6 @@
     justify-content: space-between;
     gap:10%;
     padding: 20px;
-    font-family: 'Space Mono';
 }
 
 .Scarecrow {
@@ -135,8 +136,6 @@
     border-left: none;
     width: 60px;
     text-align: center;
-    
-
 }
 .search-btn  .fa-search{
    padding: 8px 20px;
@@ -165,17 +164,17 @@
         flex-direction: column;
         align-items: center;
         padding: 0;
-        font-family: 'Space Mono';
+        font-family: 'Crimson Text', serif;
 
       
         
     }
 
     .error-heading {
-        font-family: 'Space Mono';
+        font-family: 'Crimson Text', serif;
         word-wrap: none;
         line-height: 71px;
-        font-size: 50px;
+        font-size: 55px;
         padding: 20px 0;
         margin-top: 20px;
 
@@ -183,11 +182,12 @@
     }
 
     .error-text {
-        font-family: 'Space Mono';
+        font-family: 'Playfair Display', serif;
+        
         font-style: normal;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 27px;
+        font-weight: 550;
+        font-size: 20px;
+        line-height: 28px;
         padding: 10px 10px;
         word-spacing: 2px;
     }
@@ -204,6 +204,7 @@
     }
 
     .getstarted-button a {
+        font-family: 'Crimson Text', serif;
         color: white;
         font-style: normal;
         font-weight: 700;
@@ -213,7 +214,6 @@
         text-transform: uppercase;
         align-self: center;
         letter-spacing: 1px;
-        font-family: 'Space Mono';
         
     }
     .landingmain{
@@ -224,7 +224,7 @@
         background-color: white;
         padding:30px 0px;
         margin: 0;
-         font-family: 'Space Mono';
+        
         border-radius: 0px;
       
     }
