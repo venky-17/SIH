@@ -59,7 +59,7 @@
 .error-text {
     font-family: 'Space Mono';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 450;
     font-size: 25px;
     line-height: 36px;
     letter-spacing: -0.035em;
@@ -202,6 +202,7 @@
         text-align: center;
         margin: auto;
         margin: 20px auto;
+        font-family: 'Crimson Text', serif;
     }
 
     .getstarted-button a {
