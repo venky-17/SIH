@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getAuth, signOut } from "firebase/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../Css/Navbar.css"
-
+import {  toast , ToastContainer} from 'react-toastify';
 
 const Navbar = (props) => {
   const navigate = useNavigate();
@@ -20,10 +20,29 @@ const Navbar = (props) => {
     if (user) {
       signOut(auth)
         .then(() => {
+          toast.success('Logged out successfully!', {
+            position: 'top-right',
+            autoClose: 3000, // Close the toast after 3 seconds
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
           console.log("Sign-out successful.");
           navigate("/");
         })
         .catch((error) => {
+          toast.error(error, {
+            position: 'top-right',
+            autoClose: 3000, // Close the toast after 3 seconds
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+          
           console.error("An error happened during sign-out:", error);
         });
     } else {

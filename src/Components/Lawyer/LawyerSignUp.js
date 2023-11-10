@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../Firebase/Config";
 import "../UserCSS/UserLogin.css"
+import {  toast } from 'react-toastify';
 
 
 const LawyerSignUp = ()=>{
@@ -22,6 +23,16 @@ const LawyerSignUp = ()=>{
     
         createUserWithEmailAndPassword(auth, values.email, values.password)
           .then(async (res) => {
+            toast.success('SignUp  Successfull!', {
+              position: 'top-right',
+              autoClose: 2000, 
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+            });
+            
             console.log(res);
             console.log(values);
             setSubmitDisabled(false);
@@ -34,6 +45,18 @@ const LawyerSignUp = ()=>{
             navigate("/", { state: { name: values.name } });
           })
           .catch((err) => {
+            if (!err?.code || err?.code === "auth/weak-password") {
+              toast.error("Password must contain atleast 6 digits/characters")
+            } 
+              toast.error(err.message, {
+                position: 'top-right',
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+              })
             console.log(err);
             setSubmitDisabled(false);
           });
@@ -43,7 +66,7 @@ const LawyerSignUp = ()=>{
 
     return(
         <>
-        <div className='main'>
+        <div className='main3'>
       <section className='loginsection'>
         <span></span>
        <span></span> 

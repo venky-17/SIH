@@ -1,5 +1,8 @@
 import './App.css';
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Home from "./Components/HomePg";
 
 import NotFound from './Components/NotFound';
@@ -28,7 +31,9 @@ function App() {
   }, []); 
   return (
     <div className="App">
+   
       <Router>
+      <ToastContainer/>
         <Routes>
           <Route path='/' element={<Home name={userName} />} />
           <Route path='/login' element={<UserLogin />} />

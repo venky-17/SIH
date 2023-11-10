@@ -1,6 +1,8 @@
 import React from "react";
 import {  useLocation } from "react-router-dom";
 import { getAuth } from "firebase/auth";
+import {  toast } from 'react-toastify';
+import "../../Css/LawyerHome.css"
 
 
 
@@ -12,9 +14,9 @@ import Navbar from "../Navbar"
 const LawyerHome = (props)=>{
     const location = useLocation();
 
-    const authenticated = getAuth()
+ 
     return (
-        <div>
+        <div className="lawyerContainer">
         <Navbar name={props?.name || location.state?.name}/>
 
          {
