@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap');
 *{
     padding: 0;
     margin: 0%;
@@ -13,7 +13,7 @@ nav{
     width: 100%;
     border-bottom: #fff;
     box-shadow:  0 4px 10px rgba(255, 252, 252, .4); 
-    font-family: 'Poppins', sans-serif;
+    font-family: 'EB Garamond', serif;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -189,6 +189,7 @@ nav{
     max-height: 500px;
     transition: max-height 0.8s ease-in-out; /* Apply transition to max-height */
     overflow: hidden;
+   
   }
   
   .hide-items {
@@ -207,7 +208,9 @@ nav{
 
 @media (max-width:500px){
     .logo h1{
-        font-size: 1.2rem;
+        width: auto;
+        font-size: 1.39rem;
+        letter-spacing: 1px;
 
     }
     .logo{
@@ -226,6 +229,9 @@ nav{
         background: rgb(219, 217, 217);
         padding-bottom: 15px;
 
+    }
+    .hamburger-nav-items li{
+        padding-top: 12px;
     }
 
 }

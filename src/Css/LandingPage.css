@@ -237,5 +237,8 @@
         border-radius: 0px;
       
     }
+    .search-btn{
+        padding: .5px;
+    }
     
 }
