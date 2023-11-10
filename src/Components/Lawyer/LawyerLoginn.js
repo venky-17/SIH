@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "../UserCSS/UserLogin.css"
+import {  toast } from 'react-toastify';
 
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword, updateProfile } from "firebase/auth";
@@ -20,6 +21,15 @@ function LawyerLogin() {
   
       signInWithEmailAndPassword(auth, values.email, values.password)
         .then(async (res) => {
+          toast.success('SignUp  Successfull!', {
+            position: 'top-right',
+            autoClose: 2000, 
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
           console.log(res);
           setSubmitDisabled(false);
   
@@ -31,12 +41,22 @@ function LawyerLogin() {
           navigate("/lawyerhome");
         })
         .catch((err) => {
+          toast.error(err.message, {
+            position: 'top-right',
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        
           console.log(err);
           setSubmitDisabled(false);
         });
     };
   return (
-    <div>
+    <div className='main3'>
       <section className='loginsection'>
         <span></span>
        <span></span> 

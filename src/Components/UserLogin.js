@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "../Components/UserCSS/UserLogin.css"
-
+import {  toast , ToastContainer} from 'react-toastify';
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "./Firebase/Config";
@@ -20,6 +20,16 @@ function UserLogin() {
   
       signInWithEmailAndPassword(auth, values.email, values.password)
         .then(async (res) => {
+            toast.success('Logged in successfully!', {
+    position: 'top-right',
+    autoClose: 2000, 
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
+
           console.log(res);
           setSubmitDisabled(false);
   
@@ -31,12 +41,30 @@ function UserLogin() {
           navigate("/");
         })
         .catch((err) => {
-          console.log(err);
+          
+          const errorMessage = err.message || 'An error occurred. Please try again.';
+        
+          
+          toast.error(errorMessage, {
+            position: 'top-right',
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        
+          console.error(err); 
           setSubmitDisabled(false);
         });
+        
     };
   return (
-    <div className='main'>
+    
+
+    <div className='main3'>
+    <ToastContainer/>
       <section className='loginsection'>
         <span></span>
        <span></span> 
